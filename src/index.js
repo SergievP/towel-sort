@@ -2,10 +2,17 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-    var arr2 = [];
-for (i = 0; i < arr.length; i++) {
-    if (( i + 1 ) % 2 == 0) matrix[i].reverse();
-    for (j = 0; j < arr[i].length; j++) {
-  }
-}
+    
+    if( matrix === undefined ) return [];
+
+    let arr = [];
+    
+    for (let i = 0; i < matrix.length; i++) {
+        if (( i + 1 ) % 2 == 0 ) matrix[i].reverse();
+        
+        for (let j = 0; j < matrix[i].length; j++) {
+            arr.push( matrix[i][j] );
+        }
+    }
+    return arr;
 }
